@@ -1,0 +1,10 @@
+['/df']
+Dataset Acquired: ( 27635 )
+======================================================
+Calculating Gradient Boosting
+Gradient Boosting Model exported to:  ../data/grad_2_model.sav
+======================================================
+Mean:  2149.781038538086
+MSE: 54935.2212
+Root Mean Squared Error: 234.38
+Performance  89.09749431228656 %

@@ -1,0 +1,8 @@
+['/df']
+======================================================
+Gradient Boosting model loaded from saved data file
+======================================================
+Mean:  2140.8662523351054
+MSE: 123509.0192
+Root Mean Squared Error: 351.44
+Performance  83.58421505235677 %

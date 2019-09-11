@@ -1,0 +1,81 @@
+Regression model Init
+['/df']
+Dataset Acquired: ( 27635 )
+           id        creationdate  ... loc_abbotsford no_basement
+0  6835608920 2019-03-07 07:34:47  ...              0           1
+1  6806178590 2019-01-28 13:45:52  ...              0           1
+2  6852015690 2019-03-27 15:32:11  ...              0           1
+3  6846997900 2019-03-21 12:00:07  ...              0           1
+4  6846998351 2019-03-21 12:00:32  ...              0           1
+
+[5 rows x 25 columns]
+['id', 'creationdate', 'solddate', 'title', 'fulldescription', 'numberdays', 'price', 'bedrooms', 'size_sqft', 'bath', 'professionally_managed', 'no_pet_allowed', 'suit_laundry', 'park_stall', 'available_now', 'amenities', 'brand_new', 'rent_type', 'loc_vancouver', 'loc_burnaby', 'loc_richmond', 'loc_surrey', 'loc_newwest', 'loc_abbotsford', 'no_basement']
+======================================================
+Calculating regression model
+Regression Model exported to:  ../data/reg_model.sav
+======================================================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  price   R-squared:                       0.937
+Model:                            OLS   Adj. R-squared:                  0.937
+Method:                 Least Squares   F-statistic:                 2.419e+04
+Date:                Sat, 30 Mar 2019   Prob (F-statistic):               0.00
+Time:                        17:03:52   Log-Likelihood:            -2.1529e+05
+No. Observations:               27635   AIC:                         4.306e+05
+Df Residuals:                   27618   BIC:                         4.307e+05
+Df Model:                          17                                         
+Covariance Type:            nonrobust                                         
+==========================================================================================
+                             coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+bedrooms                 340.6745      5.144     66.227      0.000     330.592     350.757
+bath                     312.2231      7.360     42.421      0.000     297.797     326.649
+size_sqft                  0.3498      0.007     50.671      0.000       0.336       0.363
+professionally_managed   174.3225      9.517     18.318      0.000     155.669     192.976
+no_pet_allowed          -123.1678      6.900    -17.851      0.000    -136.692    -109.644
+suit_laundry             123.7429      7.337     16.865      0.000     109.362     138.124
+park_stall               174.5143      8.798     19.837      0.000     157.271     191.758
+available_now             -7.2010      9.327     -0.772      0.440     -25.483      11.081
+amenities                141.6280     11.409     12.414      0.000     119.266     163.990
+brand_new                 82.9129     10.229      8.106      0.000      62.864     102.961
+loc_vancouver            796.1221      9.264     85.941      0.000     777.965     814.279
+loc_burnaby              352.5294     12.934     27.256      0.000     327.178     377.880
+loc_richmond             306.9297     15.799     19.428      0.000     275.964     337.896
+loc_surrey                61.7065     11.872      5.197      0.000      38.436      84.977
+loc_newwest              154.2288     24.631      6.262      0.000     105.950     202.507
+loc_abbotsford          -143.7553     62.505     -2.300      0.021    -266.268     -21.242
+no_basement              301.8029      8.845     34.123      0.000     284.467     319.139
+==============================================================================
+Omnibus:                     5570.227   Durbin-Watson:                   1.918
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):            19061.525
+Skew:                           1.006   Prob(JB):                         0.00
+Kurtosis:                       6.537   Cond. No.                     1.80e+04
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.8e+04. This might indicate that there are
+strong multicollinearity or other numerical problems.
+                                 0           1
+bedrooms                330.591913  350.757073
+bath                    297.796764  326.649449
+size_sqft                 0.336287    0.363351
+professionally_managed  155.669323  192.975631
+no_pet_allowed         -136.691503 -109.644065
+suit_laundry            109.361880  138.123981
+park_stall              157.270529  191.757994
+available_now           -25.482538   11.080591
+amenities               119.266277  163.989799
+brand_new                62.864462  102.961269
+loc_vancouver           777.964987  814.279186
+loc_burnaby             327.178437  377.880365
+loc_richmond            275.963658  337.895683
+loc_surrey               38.435959   84.976996
+loc_newwest             105.950376  202.507293
+loc_abbotsford         -266.268096  -21.242463
+no_basement             284.467004  319.138831
+Mean:  2149.781038538086
+Mean Absolute Error: 416.78395482380625
+Mean Squared Error: 342061.19113079354
+Root Mean Squared Error: 584.8599756615198
+Performance  72.79443975097846 %

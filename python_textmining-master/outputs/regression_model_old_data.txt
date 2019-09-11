@@ -1,0 +1,66 @@
+Regression model Init
+['/df']
+Dataset Acquired: ( 27836 )
+           id        creationdate  ... brand_new    rent_type
+0  6839063654 2019-03-11 14:18:32  ...         0    FAST RENT
+1  6844047556 2019-03-18 00:21:10  ...         0    FAST RENT
+2  6842588659 2019-03-15 19:55:59  ...         0    FAST RENT
+3  6845729510 2019-03-19 22:14:36  ...         0         None
+4  6832231008 2019-03-02 19:02:09  ...         0  MEDIUM RENT
+
+[5 rows x 18 columns]
+['id', 'creationdate', 'solddate', 'title', 'fulldescription', 'numberdays', 'price', 'bedrooms', 'size_sqft', 'bath', 'professionally_managed', 'no_pet_allowed', 'suit_laundry', 'park_stall', 'available_now', 'amenities', 'brand_new', 'rent_type']
+======================================================
+Regression model loaded from saved data file
+======================================================
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                  price   R-squared:                       0.899
+Model:                            OLS   Adj. R-squared:                  0.899
+Method:                 Least Squares   F-statistic:                 2.477e+04
+Date:                Sat, 30 Mar 2019   Prob (F-statistic):               0.00
+Time:                        17:10:23   Log-Likelihood:            -2.2325e+05
+No. Observations:               27823   AIC:                         4.465e+05
+Df Residuals:                   27813   BIC:                         4.466e+05
+Df Model:                          10                                         
+Covariance Type:            nonrobust                                         
+==========================================================================================
+                             coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------------------
+bedrooms                 412.2516      6.084     67.764      0.000     400.327     424.176
+bath                     535.7619      8.718     61.455      0.000     518.674     552.850
+size_sqft                  0.3256      0.009     38.148      0.000       0.309       0.342
+professionally_managed   289.8027     11.935     24.282      0.000     266.410     313.195
+no_pet_allowed           -20.0181      8.400     -2.383      0.017     -36.483      -3.553
+suit_laundry             271.6858      9.114     29.809      0.000     253.822     289.550
+park_stall               423.0263     10.751     39.349      0.000     401.955     444.098
+available_now            -12.6015     11.643     -1.082      0.279     -35.422      10.219
+amenities                278.9578     14.292     19.519      0.000     250.946     306.970
+brand_new                 94.3452     12.868      7.332      0.000      69.123     119.567
+==============================================================================
+Omnibus:                     2332.144   Durbin-Watson:                   1.920
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             5602.988
+Skew:                           0.512   Prob(JB):                         0.00
+Kurtosis:                       4.946   Cond. No.                     3.32e+03
+==============================================================================
+
+Warnings:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.32e+03. This might indicate that there are
+strong multicollinearity or other numerical problems.
+                                 0           1
+bedrooms                400.327409  424.175763
+bath                    518.674187  552.849551
+size_sqft                 0.308879    0.342339
+professionally_managed  266.410236  313.195223
+no_pet_allowed          -36.483247   -3.552977
+suit_laundry            253.821681  289.549849
+park_stall              401.954743  444.097895
+available_now           -35.421928   10.218930
+amenities               250.945547  306.970031
+brand_new                69.123360  119.567071
+Mean:  2140.8662523351054
+Mean Absolute Error: 546.7202406709096
+Mean Squared Error: 546027.2388508316
+Root Mean Squared Error: 738.9365594222766
+Performance  65.4842259007868 %

@@ -1,0 +1,23 @@
+{
+	"price": 0.0,
+	"bedrooms": 1.0,
+	"bath": 2.0,
+	"size_sqft": 500.0,
+	"professionally_managed": 1.0,
+	"no_pet_allowed": 0.0,
+	"suit_laundry": 0.0,
+	"park_stall": 0.0,
+	"available_now": 0.0,
+	"amenities": 0.0,
+	"brand_new": 0.0,
+	"loc_vancouver": 0.0,
+	"loc_burnaby": 1.0,
+	"loc_richmond": 0.0,
+	"loc_surrey": 0.0,
+	"loc_newwest": 0.0,
+	"loc_abbotsford": 0.0,
+	"no_basement": 1.0,
+	"gradient_boost": 0.0,
+	"gradient_xgb": 0.0,
+	"regression": 0.0
+}

@@ -1,0 +1,18 @@
+import pymongo
+import requests
+import urllib3
+from bs4 import BeautifulSoup
+import settings
+
+#url = "https://vancouver.craigslist.org/search/eby/hhh?hasPic=1"
+
+#urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+print(settings.DATABASE_NAME)
+
+client = pymongo.MongoClient(settings.MONGO_URI)
+vcha_db = client.VCHA
+vcha_col = vcha_db.extracted_data
+x=vcha_col.find_one()
+
+print(x['house_description'])

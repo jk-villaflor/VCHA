@@ -1,0 +1,7 @@
+['/df']
+Gradient Boosting model XGBRegressor loaded from saved data file
+======================================================
+Root mean square error for test dataset: 381.15
+Mean:  2140.8662523351054
+Root Mean Squared Error: 381.15
+Performance  82.19645904622634 %
